@@ -1,0 +1,14 @@
+# Ignore large video files from Git
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+
+# Ignore sensitive files
+.env
+*.key
+
+# Ignore temporary files
+.DS_Store
+Thumbs.db
