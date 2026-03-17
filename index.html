@@ -1,0 +1,283 @@
+<!-- Last updated: 2026-03-17 14:25 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrick Cinema TV - Professional Streaming Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="left">
+            <div class="logo">Patrick Cinema TV</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#trending">Trending</a></li>
+                    <li><a href="#my-list">My List</a></li>
+                    <li><a href="#account">Account</a></li>
+                    <li><a href="#help">Help</a></li>
+                </ul>
+            </nav>
+            <div class="search">
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
+        <div class="right">
+            <div class="user-avatar">U</div>
+            <button class="pay">Pay</button>
+            <button class="upgrade">Upgrade</button>
+            <button class="help-btn">Help</button>
+        </div>
+    </header>
+
+    <!-- chatbot modal -->
+    <div class="chatbot" id="chatbot">
+        <div class="chat-header">
+            <span>Help Chat</span>
+            <button id="chat-close">×</button>
+        </div>
+        <div class="chat-messages" id="chat-messages"></div>
+        <div class="chat-input">
+            <input type="text" id="chat-input-field" placeholder="Type a question...">
+            <button id="chat-send">Send</button>
+        </div>
+    </div>
+    </header>
+
+    <!-- sidebar -->
+    <aside class="sidebar">
+        <ul>
+            <li><span class="icon">🏠</span><span class="label">Home</span></li>
+            <li><span class="icon">🎬</span><span class="label">Browse</span></li>
+            <li><span class="icon">🔍</span><span class="label">Search</span></li>
+            <li><span class="icon">⭐</span><span class="label">My List</span></li>
+            <li><span class="icon">⚙️</span><span class="label">Settings</span></li>
+        </ul>
+    </aside>
+
+    <!-- main content -->
+    <main>
+        <section id="hero" class="hero-carousel">
+            <div class="slide active" style="background-image:url('lulu.jpg')">
+                <div class="overlay">
+                    <h2>Lulu - Featured Movie</h2>
+                    <button class="play-btn">▶ Play Movie</button>
+                </div>
+            </div>
+            <div class="slide" style="background-image:url('ayana.jpg')">
+                <div class="overlay">
+                    <h2>Ayana - Another Hit</h2>
+                    <button class="play-btn">▶ Play Movie</button>
+                </div>
+            </div>
+            <div class="slide" style="background-image:url('lazizi.jpg')">
+                <div class="overlay">
+                    <h2>Lazizi - Trending Now</h2>
+                    <button class="play-btn">▶ Play Movie</button>
+                </div>
+            </div>
+            <!-- more slides as needed -->
+            <button class="carousel-prev">‹</button>
+            <button class="carousel-next">›</button>
+        </section>
+
+        <section class="content-row" id="continue-watching">
+            <div class="row-header">
+                <h3>Continue Watching</h3>
+                <a href="#" class="view-more">View More →</a>
+            </div>
+            <div class="row">
+                <div class="movie-card">
+                    <div class="card-wrapper">
+                        <img src="ayana.jpg" alt="Ayana">
+                        <span class="episodes-badge">3 Episodes</span>
+                        <span class="hd">HD</span>
+                        <span class="new-badge">NEW</span>
+                    </div>
+                    <div class="episodes-panel" style="display: none;">
+                        <h4>Ayana</h4>
+                        <button class="episode-btn" data-video="https://youtu.be/V89rkxV6Y-4?si=77kq3sBtaoYfoeRU">Full Movie: Ayana</button>
+                        <button class="episode-btn" data-video="ayana_friday_6th_part_1.mp4">Episode 1: Ayana Friday 6th Part 1</button>
+                        <button class="episode-btn" data-video="ayana_friday_6th_part_2.mp4">Episode 2: Ayana Friday 6th Part 2</button>
+                    </div>
+                    <div class="video-player" style="display: none;">
+                        <button class="back-btn">← Back</button>
+                        <video class="episode-video" poster="ayana.jpg" controls preload="none"></video>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <div class="card-wrapper">
+                        <img src="lulu.jpg" alt="Lulu">
+                        <span class="episodes-badge">1 Episode</span>
+                        <span class="hd">HD</span>
+                    </div>
+                    <div class="episodes-panel" style="display: none;">
+                        <h4>Lulu</h4>
+                        <button class="episode-btn" data-video="LULU THUR.mp4">Episode 1: Lulu Thursday</button>
+                    </div>
+                    <div class="video-player" style="display: none;">
+                        <button class="back-btn">← Back</button>
+                        <video class="episode-video" poster="lulu.jpg" controls preload="none"></video>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="qutu.jpg" alt="Qutu">
+                    <div class="title">Qutu</div>
+                    <span class="hd">HD</span>
+                </div>
+                <div class="movie-card">
+                    <img src="lazizi.jpg" alt="Lazizi">
+                    <div class="title">Lazizi</div>
+                    <span class="hd">HD</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-row" id="soaps">
+            <div class="row-header">
+                <h3>Soaps</h3>
+                <a href="#" class="view-more">View More →</a>
+            </div>
+            <div class="row">
+                <div class="movie-card">
+                    <img src="blood and water.jpg" alt="Blood and Water">
+                    <div class="title">Blood and Water</div>
+                    <span class="hd">HD</span>
+                </div>
+                <div class="movie-card">
+                    <img src="double kara.jpg" alt="Double Kara">
+                    <div class="title">Double Kara</div>
+                    <span class="hd">HD</span>
+                </div>
+                <div class="movie-card">
+                    <img src="once again.jpg" alt="Once Again">
+                    <div class="title">Once Again</div>
+                    <span class="hd">HD</span>
+                </div>
+                <div class="movie-card">
+                    <img src="promise.jpg" alt="Promise">
+                    <div class="title">Promise</div>
+                    <span class="hd">HD</span>
+                </div>
+                <div class="movie-card">
+                    <img src="the silent thief.jpg" alt="The Silent Thief">
+                    <div class="title">The Silent Thief</div>
+                    <span class="hd">HD</span>
+                </div>
+                <div class="movie-card">
+                    <img src="two heart.jpg" alt="Two Heart">
+                    <div class="title">Two Heart</div>
+                    <span class="hd">HD</span>
+                </div>
+                <div class="movie-card">
+                    <img src="ayana.jpg" alt="Ayana">
+                    <div class="title">Ayana</div>
+                    <span class="hd">HD</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-row" id="tv-shows">
+            <div class="row-header">
+                <h3>TV Shows</h3>
+                <a href="#" class="view-more">View More →</a>
+            </div>
+            <div class="row">
+                <div class="movie-card">
+                    <img src="jiji.jpg" alt="Jiji">
+                    <div class="title">Jiji</div>
+                    <span class="hd">HD</span>
+                </div>
+                <div class="movie-card">
+                    <img src="ayana.jpg" alt="Ayana">
+                    <div class="title">Ayana</div>
+                    <span class="hd">HD</span>
+                </div>
+                <div class="movie-card">
+                    <img src="lazizi.jpg" alt="Lazizi">
+                    <div class="title">Lazizi</div>
+                    <span class="hd">HD</span>
+                </div>
+                <div class="movie-card">
+                    <img src="lulu.jpg" alt="Lulu">
+                    <div class="title">Lulu</div>
+                    <span class="hd">HD</span>
+                </div>
+                <div class="movie-card">
+                    <img src="neema.jpg" alt="Neema">
+                    <div class="title">Neema</div>
+                    <span class="hd">HD</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-row" id="live">
+            <div class="row-header">
+                <h3>Live</h3>
+                <a href="#" class="view-more">View More →</a>
+            </div>
+            <div class="row">
+                <!-- placeholder cards -->
+            </div>
+        </section>
+
+        <section class="content-row" id="trending-now">
+            <div class="row-header">
+                <h3>Trending Now</h3>
+                <a href="#" class="view-more">View More →</a>
+            </div>
+            <div class="row">
+                <!-- placeholder cards -->
+            </div>
+        </section>
+
+        <section class="content-row" id="skoolflix">
+            <div class="row-header">
+                <h3>Skoolflix</h3>
+                <a href="#" class="view-more">View More →</a>
+            </div>
+            <div class="row">
+                <!-- placeholder cards -->
+            </div>
+        </section>
+
+        <section class="content-row" id="drama">
+            <div class="row-header">
+                <h3>Drama</h3>
+                <a href="#" class="view-more">View More →</a>
+            </div>
+            <div class="row">
+                <!-- placeholder cards -->
+            </div>
+        </section>
+
+        <section class="content-row" id="suggested">
+            <div class="row-header">
+                <h3>Suggested</h3>
+                <a href="#" class="view-more">View More →</a>
+            </div>
+            <div class="row">
+                <!-- placeholder cards -->
+            </div>
+        </section>
+
+        <!-- more sections as needed -->
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Patrick Cinema TV - www.patrickcinemaTv.com. All rights reserved.</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
